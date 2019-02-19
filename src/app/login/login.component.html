@@ -1,8 +1,6 @@
-<fieldset>
+<div fxLayout="column" fxLayoutAlign="space-around center" class="loginArea">
 
-  <h1>Login</h1>
-
-  <div class="loginBlock">
+  <div class="loginBlock" fxFlex="400px">
     <div class="iconBox iconUser"></div>
     <input [(ngModel)]="logininfo.loginid" placeholder="Login ID">
     <div class="iconBox iconPassword"></div>
@@ -10,4 +8,5 @@
     <button class="loginBtn" (click)="loginService.doLogin(logininfo.loginid, logininfo.password)">login</button>
   </div>
 
-</fieldset>
+</div>
+
