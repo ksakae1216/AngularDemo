@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component'
 import { ListComponent } from './list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
