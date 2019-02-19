@@ -10,6 +10,7 @@ import { DataListDef } from '../object/data-list-def';
 export class ListComponent implements OnInit {
 
   dataList: DataListDef[];
+  displayedColumns = ['id', 'name', 'tel', 'address'];
 
   constructor(private listService: ListService) { }
 

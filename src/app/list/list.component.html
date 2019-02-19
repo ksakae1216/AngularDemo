@@ -1,10 +1,26 @@
 <h1>List page</h1>
 
-<ul class="dataList">
-  <li *ngFor="let data of dataList">
-    <span class="">{{data.id}}</span> , {{data.name}}, {{data.tel}}, {{data.address}}
-  </li>
-</ul>
+<mat-table [dataSource]="dataList">
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef> id </mat-header-cell>
+    <mat-cell *matCellDef="let data"> {{data.id}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> name </mat-header-cell>
+    <mat-cell *matCellDef="let data"> {{data.name}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="tel">
+    <mat-header-cell *matHeaderCellDef> tel </mat-header-cell>
+    <mat-cell *matCellDef="let data"> {{data.tel}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="address">
+    <mat-header-cell *matHeaderCellDef> address </mat-header-cell>
+    <mat-cell *matCellDef="let data"> {{data.address}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
 
 <br>
 <a routerLink='/login'>back to login page</a>
