@@ -1,6 +1,15 @@
 # My Blog
 https://www.ksakae1216.com/entry/2019/02/20/073000
 
+# web start
+
+npm install
+
+npm start
+
+localhost:4200/
+
+
 # Login
 
 loginid:test1
